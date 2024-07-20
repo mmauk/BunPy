@@ -88,8 +88,9 @@ def read_dat(datFile, version, numTrials,cal, Data):
         filterAndNormalize(Data,version,numTrials,cal)
     return
 
-def waterfall(data,version, sweepLength,drawto, startTrial,stopTrial):
+def waterfall(data,version, numTrials, sweepLength,drawto, startTrial,stopTrial):
     if drawto == 0: drawto = sweepLength
+    if stopTrial ==0:stopTrial = numTrials
     xSize, ySize = screenInfo()
     fig, ax = plt.subplots()
     ax.set_axis_off()
