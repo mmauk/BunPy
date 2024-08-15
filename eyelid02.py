@@ -5,6 +5,7 @@ import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 
+
 class eyelidTrial():
     def __init__(self,sweeplength):
         self.CSduration = 0
@@ -96,7 +97,7 @@ def waterfall(data,version, numTrials, sweepLength,drawto, startTrial,stopTrial)
     ax.set_axis_off()
     windowmanager = plt.get_current_fig_manager()
     screenSize = str(ySize)+"x"+str(ySize)+"+0+0"
-    windowmanager.window.wm_geometry(screenSize)
+    #windowmanager.window.wm_geometry(screenSize)
     xoffset = 0
     yoffset = 0
     xjump = int(drawto*.0045)
